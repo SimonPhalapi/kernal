@@ -13,6 +13,7 @@ namespace PhalApi\Model;
  * @author      dogstar <chanzonghuang@gmail.com> 2015-02-22
  */
 
+#[\AllowDynamicProperties]
 class Query {
 
     /**
