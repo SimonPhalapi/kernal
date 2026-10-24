@@ -243,9 +243,9 @@ class CUrl {
             unset($this->header['Cookie']);
             unset($this->option[CURLOPT_COOKIEFILE]);
         }
-
-        curl_close($ch);
-
+        if (version_compare(PHP_VERSION, '8.0.0', '<')) {
+            curl_close($ch);
+        }
         return $rs;
     }
     
